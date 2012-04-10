@@ -4,7 +4,7 @@ use common::sense;
 use constant FIRST => 0;
 use JSON::Any;
 
-our $VERSION = q(0.0.1);
+our $VERSION = q(0.0.2);
 
 
 =head1 NAME 
@@ -43,16 +43,46 @@ JSON-HPack - JSON Homogeneous Collections Compressor
 
 JSON HPack perl implementation is based on other implementations available on Github L<https://github.com/WebReflection/JSONH>
 
-Usually a database result set, stored as list of objects where all of them contains the same amount of keys with identical name. This is a basic homogeneous collection example: [{"a":"A","b":"B"},{"a":"C","b":"D"},{"a":"E","b":"F"}] We all have exchange over the network one or more homogenous collections at least once. JSON::HPack is able to pack the example into [2,"a","b","A","B","C","D","E","F"] and unpack it into original collection at light speed.
+Usually a database result set, stored as list of objects where all of them contains the same amount 
+of keys with identical name. This is a basic homogeneous collection example: 
+
+  [{"a":"A","b":"B"},{"a":"C","b":"D"},{"a":"E","b":"F"}] 
+
+We all have exchange over the network one or more homogenous collections at least once. JSON::HPack is able to 
+pack the example into: 
+
+  [2,"a","b","A","B","C","D","E","F"] 
+
+and unpack it into original collection at light speed.
 
 =head2 C<pack> 
+
+
   $packed_structure = JSON::HPack->pack( $unpacked_structure );
+
+
 =head2 C<unpack> 
+
+
   $unpacked_structure = JSON::HPack->unpack( $packed_structure );
+
+
 =head2 C<dump> 
+
+
   $packed_json = JSON::HPack->dump( $unpacked_structure );
+
+
 =head2 C<load> 
+
+
   $unpacked_structure = JSON::HPack->load( $packed_json );
+
+
+=head1 BUGS
+
+Please report them.
+
 =cut
 
 

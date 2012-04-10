@@ -18,6 +18,12 @@ WriteMakefile(
   VERSION_FROM => 'lib/JSON/HPack.pm',
   ABSTRACT     => 'A simple and fast JSON Packer',
   AUTHOR       => 'Venkatakrishnan Ganesh <gvenkat@cpan.org>',
+  LICENSE      => 'artistic_2',
+  'PREREQ_PM' => {
+       'Test::More'  => 0, 
+       'common::sense' => 0,
+       'JSON::Any'  => 0
+  },
 
   ( $mm < 6.46
     ? ()
