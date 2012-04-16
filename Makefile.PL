@@ -22,7 +22,8 @@ WriteMakefile(
   'PREREQ_PM' => {
        'Test::More'  => 0, 
        'common::sense' => 0,
-       'JSON::Any'  => 0
+       'JSON::Any'  => 0,
+       'Test::Deep' => 0
   }
 );
 
