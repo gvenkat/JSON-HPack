@@ -4,7 +4,7 @@ use common::sense;
 use constant FIRST => 0;
 use JSON::Any;
 
-our $VERSION = q(0.0.2);
+our $VERSION = q(0.0.3);
 
 
 =head1 NAME 
